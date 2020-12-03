@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>    <title>Newser</title>
+    <link rel='stylesheet' href='main.css'>
+    <script type='text/javascript' src='main.js'></script>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='sign-in'>
+        <h2>Sign-in</h2>
+        <form>
+          <div>
+            <label for='sign-in-email'>Email</label>
+            <input id='sign-in-email' type='email' name='sign-in-email' value=''>
+          </div>
+          <div>
+            <label for=''>Password</label>
+            <input id='' type='text' name='' value=''>
+          </div>
+          <input type='submit' name='' value='Sign-in'>
+        </form>
+      </div>
+
+      <div id='settings'>
+        <h2>Settings</h2>
+      </div>
+
+      <div id='sign-up'>
+        <h2>Sign-up</h2>
+        <form>
+          <div>
+            <label for=''>Email</label>
+            <input id='' type='text' name='' value=''>
+          </div>
+          <div>
+            <label for=''>Username</label>
+            <input id='' type='text' name='' value=''>
+          </div>
+          <div>
+            <label for=''>Password</label>
+            <input id='' type='text' name='' value=''>
+          </div>
+          <input type='submit' name='' value='Sign-up'>
+        </form>
+      </div>
+
+      <div id='ignored'>
+        <h2>Ignored</h2>
+        <ul>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+        </ul>
+      </div>
+
+      <div id='swiper'>
+        <h2>Swiper</h2>
+        <div>
+          <button type='button' name='ignored' onclick='showIgnored()'>Ignored</button>
+          <button type='button' name='saved' onclick='showSaved()'>Saved</button>
+        </div>
+
+        <div id='articles'>
+          <article>
+            <img src='temp.png'>
+          </article>
+        </div>
+
+        <div>
+          <button type='button' name='ignore' onclick='ignore()'>Ignore</button>
+          <button type='button' name='read' onclick='read()'>Read</button>
+          <button type='button' name='save' onclick='save()'>Save</button>
+        </div>
+      </div>
+
+      <div id='saved'>
+        <h2>Saved</h2>
+        <ul>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+        </ul>
+      </div>
+
+      <div id='preloader'>
+        <h2>Preloader</h2>
+        <div id='preloader-icon'>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
