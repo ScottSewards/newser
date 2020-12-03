@@ -7,8 +7,8 @@
     <script type='text/javascript' src='main.js'></script>
   </head>
   <body>
-    <div id='container'>
-      <div id='sign-in'>
+    <main>
+      <section id='sign-in'>
         <h2>Sign-in</h2>
         <form>
           <div>
@@ -22,16 +22,16 @@
           <input type='submit' name='' value='Sign-in'>
         </form>
         <button type='button' name='show-settings' onclick='showView("Settings")'>Back to Settings</button>
-      </div>
+      </section>
 
-      <div id='settings'>
+      <section id='settings'>
         <h2>Settings</h2>
         <button type='button' name='show-sign-in' onclick='showView("Sign-in")'>Sign-in</button>
         <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
         <button type='button' name='show-sign-up' onclick='showView("Sign-up")'>Sign-up</button>
-      </div>
+      </section>
 
-      <div id='sign-up'>
+      <section id='sign-up'>
         <h2>Sign-up</h2>
         <form>
           <div>
@@ -49,9 +49,9 @@
           <input type='submit' name='' value='Sign-up'>
         </form>
         <button type='button' name='show-settings' onclick='showView("Settings")'>Back to Settings</button>
-      </div>
+      </section>
 
-      <div id='ignored'>
+      <section id='ignored'>
         <h2>Ignored</h2>
         <ul>
           <li>List Item</li>
@@ -59,9 +59,9 @@
           <li>List Item</li>
         </ul>
         <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
-      </div>
+      </section>
 
-      <div id='swiper'>
+      <section id='swiper'>
         <h2>Swiper</h2>
         <div>
           <button type='button' name='ignored' onclick='showView("Ignored")'>Ignored</button>
@@ -72,17 +72,21 @@
         <div id='articles'>
           <article>
             <img src='temp.png'>
+            <div class='article-information'>
+              <h3 class='article-title'>Artitle</h3>
+              <p class='article-content'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
           </article>
         </div>
 
         <div>
-          <button type='button' name='ignore' onclick='ignore()'>Ignore</button>
+          <button id='ignore-button' type='button' name='ignore' onclick='ignore()'>Ignore</button>
           <button type='button' name='read' onclick='showView("Preloader")'>Read</button>
-          <button type='button' name='save' onclick='save()'>Save</button>
+          <button id='save-button' type='button' name='save' onclick='save()'>Save</button>
         </div>
-      </div>
+      </section>
 
-      <div id='saved'>
+      <section id='saved'>
         <h2>Saved</h2>
         <ul>
           <li>List Item</li>
@@ -90,15 +94,15 @@
           <li>List Item</li>
         </ul>
         <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
-      </div>
+      </section>
 
-      <div id='preloader'>
+      <section id='preloader'>
         <h2>Preloader</h2>
         <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
         <div id='preloader-icon'>
 
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>

@@ -11,7 +11,7 @@ body {
 }
 
 
-#container {
+main {
   background: black;
   box-sizing: border-box;
   display: grid;
@@ -21,6 +21,7 @@ body {
     ". preloader .";
   grid-template-columns: 100vw 100vw 100vw;
   grid-gap: 1px;
+  transform: translate(-100vh, -100vw);
   transition: transform 1s;
   //animation: slidein 2s infinite alternate;
 }
@@ -40,7 +41,7 @@ h2 {
   text-align: center;
 }
 
-#container > * {
+main > * {
   background: white;
   box-sizing: border-box;
   padding: 1rem;
@@ -80,7 +81,43 @@ form div {
   margin-bottom: 0.5rem;
 }
 input, button {
+  background: white;
   font-size: 14px;
   padding: 1rem;
+  border: 0;
+  box-shadow: 0 0 5px 0 grey;
   border-radius: 100rem;
+}
+button {
+  cursor: pointer;
+}
+
+#save-button {
+  background: #00FF0080;
+}
+
+#ignore-button {
+  background: #FF000080;
+}
+
+article {
+  box-shadow: 0 0 5px 0 grey;
+  border-radius: 1rem;
+  margin: auto;
+  max-width: 300px;
+}
+article img {
+  width: 100%;
+}
+.article-information {
+  padding: 1rem;
+}
+.article-title {
+  margin-bottom: 0.5rem;
+}
+.article-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
