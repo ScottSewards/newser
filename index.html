@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>    <title>Newser</title>
-    <link rel='stylesheet' href='main.css'>
+    <link rel='stylesheet' href='main.min.css'>
     <script type='text/javascript' src='main.js'></script>
   </head>
   <body>
@@ -21,10 +21,14 @@
           </div>
           <input type='submit' name='' value='Sign-in'>
         </form>
+        <button type='button' name='show-settings' onclick='showView("Settings")'>Back to Settings</button>
       </div>
 
       <div id='settings'>
         <h2>Settings</h2>
+        <button type='button' name='show-sign-in' onclick='showView("Sign-in")'>Sign-in</button>
+        <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
+        <button type='button' name='show-sign-up' onclick='showView("Sign-up")'>Sign-up</button>
       </div>
 
       <div id='sign-up'>
@@ -44,6 +48,7 @@
           </div>
           <input type='submit' name='' value='Sign-up'>
         </form>
+        <button type='button' name='show-settings' onclick='showView("Settings")'>Back to Settings</button>
       </div>
 
       <div id='ignored'>
@@ -53,13 +58,15 @@
           <li>List Item</li>
           <li>List Item</li>
         </ul>
+        <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
       </div>
 
       <div id='swiper'>
         <h2>Swiper</h2>
         <div>
-          <button type='button' name='ignored' onclick='showIgnored()'>Ignored</button>
-          <button type='button' name='saved' onclick='showSaved()'>Saved</button>
+          <button type='button' name='ignored' onclick='showView("Ignored")'>Ignored</button>
+          <button type='button' name='show-settings' onclick='showView("Settings")'>Settings</button>
+          <button type='button' name='saved' onclick='showView("Saved")'>Saved</button>
         </div>
 
         <div id='articles'>
@@ -70,7 +77,7 @@
 
         <div>
           <button type='button' name='ignore' onclick='ignore()'>Ignore</button>
-          <button type='button' name='read' onclick='read()'>Read</button>
+          <button type='button' name='read' onclick='showView("Preloader")'>Read</button>
           <button type='button' name='save' onclick='save()'>Save</button>
         </div>
       </div>
@@ -82,10 +89,12 @@
           <li>List Item</li>
           <li>List Item</li>
         </ul>
+        <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
       </div>
 
       <div id='preloader'>
         <h2>Preloader</h2>
+        <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
         <div id='preloader-icon'>
 
         </div>
