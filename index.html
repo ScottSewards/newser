@@ -9,7 +9,9 @@
   <body>
     <main>
       <section id='sign-in'>
-        <h2>Sign-in</h2>
+        <div class='header'>
+          <h2>Sign-in</h2>
+        </div>
         <form>
           <div>
             <label for='sign-in-email'>Email</label>
@@ -21,18 +23,31 @@
           </div>
           <input type='submit' name='' value='Sign-in'>
         </form>
-        <button type='button' name='show-settings' onclick='showView("Settings")'>Back to Settings</button>
+        <div class='buttons'>
+          <button type='button' name='show-settings' onclick='showView("Settings")'>Back to Settings</button>
+        </div>
       </section>
 
       <section id='settings'>
-        <h2>Settings</h2>
-        <button type='button' name='show-sign-in' onclick='showView("Sign-in")'>Sign-in</button>
-        <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
-        <button type='button' name='show-sign-up' onclick='showView("Sign-up")'>Sign-up</button>
+        <div class='header'>
+          <h2>Settings</h2>
+        </div>
+        <div class='buttons'>
+          <button type='button' name='show-sign-in' onclick='showView("Sign-in")'>Sign-in</button>
+          <button type='button' name='show-sign-up' onclick='showView("Sign-up")'>Sign-up</button>
+        </div>
+        <form class='less'>
+          <input type="text" name="" value="sadasdsa">
+        </form>
+        <div class='buttons'>
+          <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
+        </div>
       </section>
 
       <section id='sign-up'>
-        <h2>Sign-up</h2>
+        <div class='header'>
+          <h2>Sign-up</h2>
+        </div>
         <form>
           <div>
             <label for=''>Email</label>
@@ -48,22 +63,28 @@
           </div>
           <input type='submit' name='' value='Sign-up'>
         </form>
-        <button type='button' name='show-settings' onclick='showView("Settings")'>Back to Settings</button>
+        <div class='buttons'>
+          <button type='button' name='show-settings' onclick='showView("Settings")'>Back to Settings</button>
+        </div>
       </section>
 
       <section id='ignored'>
-        <h2>Ignored</h2>
-        <ul>
+        <div class='header'>
+          <h2>Ignored</h2>
+          <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
+        </div>
+        <ul id='ignored-list'>
           <li>List Item</li>
           <li>List Item</li>
           <li>List Item</li>
         </ul>
-        <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
       </section>
 
       <section id='swiper'>
-        <h2>Swiper</h2>
-        <div>
+        <div class='header'>
+          <h2>Swiper</h2>
+        </div>
+        <div class='buttons'>
           <button type='button' name='ignored' onclick='showView("Ignored")'>Ignored</button>
           <button type='button' name='show-settings' onclick='showView("Settings")'>Settings</button>
           <button type='button' name='saved' onclick='showView("Saved")'>Saved</button>
@@ -79,7 +100,7 @@
           </article>
         </div>
 
-        <div>
+        <div class='buttons'>
           <button id='ignore-button' type='button' name='ignore' onclick='ignore()'>Ignore</button>
           <button type='button' name='read' onclick='showView("Preloader")'>Read</button>
           <button id='save-button' type='button' name='save' onclick='save()'>Save</button>
@@ -87,18 +108,24 @@
       </section>
 
       <section id='saved'>
-        <h2>Saved</h2>
-        <ul>
+        <div class='header'>
+          <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
+          <h2>Saved</h2>
+        </div>
+        <ul id='saved-list'>
           <li>List Item</li>
           <li>List Item</li>
           <li>List Item</li>
         </ul>
-        <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
       </section>
 
       <section id='preloader'>
-        <h2>Preloader</h2>
-        <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
+        <div class='header'>
+          <h2>Preloader</h2>
+        </div>
+        <div class='buttons'>
+          <button type='button' name='show-swiper' onclick='showView("Swiper")'>Back to Swiper</button>
+        </div>
         <div id='preloader-icon'>
 
         </div>

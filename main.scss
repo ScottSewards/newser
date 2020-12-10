@@ -2,6 +2,7 @@
   margin: 0;
   font-family: sans-serif;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,8 +13,6 @@ body {
 
 
 main {
-  background: black;
-  box-sizing: border-box;
   display: grid;
   grid-template-areas:
     "sign-in settings sign-up"
@@ -21,11 +20,18 @@ main {
     ". preloader .";
   grid-template-columns: 100vw 100vw 100vw;
   grid-gap: 1px;
-  transform: translate(-100vh, -100vw);
-  transition: transform 1s;
+  //transform: translate(-200vh, -000vw);
+  transition: transform 0.3s;
   //animation: slidein 2s infinite alternate;
+  > * {
+    background: white;
+    box-sizing: border-box;
+    height: 100vh;
+  }
 }
 
+
+/*
 @keyframes slidein {
   from {
     transform: translate(0, 0);
@@ -34,19 +40,29 @@ main {
     transform: translate(-100vw, 0);
   }
 }
+*/
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  > *:not(:first-child) { margin-left: 1rem; }
+}
+
+.header {
+  grid-area: header;
+  > button {
+    position: absolute;
+  }
+}
 
 h2 {
-  font-size: 125%;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 1rem;
   text-align: center;
+  border-bottom: 1px solid gray;
 }
 
-main > * {
-  background: white;
-  box-sizing: border-box;
-  padding: 1rem;
-  height: 100vh;
-}
 
 #sign-in {
   grid-area: sign-in;
@@ -63,9 +79,32 @@ main > * {
 #ignored {
   grid-area: ignored;
 }
+#ignored, #saved {
+  display: grid;
+  grid-template-areas:
+  "header"
+  "content";
+  grid-template-columns: 100%;
+  grid-template-rows: 3rem auto;
+}
+#ignored-list, #saved-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  > li {
+    padding: 1rem;
+    border-bottom: 1px solid black;
+  }
+}
 
 #swiper {
   grid-area: swiper;
+}
+#save-button {
+  background: #00FF0080;
+}
+#ignore-button {
+  background: #FF000080;
 }
 
 #saved {
@@ -76,29 +115,6 @@ main > * {
   grid-area: preloader;
 }
 
-
-form div {
-  margin-bottom: 0.5rem;
-}
-input, button {
-  background: white;
-  font-size: 14px;
-  padding: 1rem;
-  border: 0;
-  box-shadow: 0 0 5px 0 grey;
-  border-radius: 100rem;
-}
-button {
-  cursor: pointer;
-}
-
-#save-button {
-  background: #00FF0080;
-}
-
-#ignore-button {
-  background: #FF000080;
-}
 
 article {
   box-shadow: 0 0 5px 0 grey;
@@ -120,4 +136,43 @@ article img {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+
+
+
+form {
+  margin: 1rem;
+}
+form:not(.less) {
+  box-shadow: 0 0 5px 0 gray;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+form div {
+  margin-bottom: 0.5rem;
+}
+input, button {
+  background: white;
+  font-size: 14px;
+  padding: 1rem;
+  border: 0;
+  display: block;
+  box-shadow: 0 0 3px 0 grey;
+  outline: 0;
+  border-radius: 100rem;
+  transition: box-shadow 0.1s;
+  &:hover {
+    box-shadow: 0 0 3px 2px grey;
+  }
+}
+input {
+  width: 100%;
+}
+label {
+  display: block;
+  padding: 0 1rem;
+}
+button, input[type='submit'] {
+  cursor: pointer;
 }

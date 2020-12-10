@@ -4,7 +4,7 @@ const $$ = (css, parent = document) => Array.from(parent.querySelectorAll(css));
 window.onload = function() {
   document.body.scrollTop;
   document.body.scrollLeft;
-  showView('Swiper');
+  showView('Saved');
 
   document.addEventListener('keydown', function(event) {
     console.log(event.key);
